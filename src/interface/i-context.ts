@@ -11,6 +11,11 @@ export interface IContext{
    * TwoWords
    */
   pascalCase:string
+
+  /**
+   * TWO_WORDS
+   */
+  pascalSnakeCase:string
   /**
    * 中文名称
    */
