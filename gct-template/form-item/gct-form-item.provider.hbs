@@ -1,0 +1,15 @@
+import { Form{{pascalCase}}Controller, useFormItemController } from '../../../controller';
+import {
+  IFormController,
+  IForm{{pascalCase}}Controller,
+  IFormItemBasic,
+  IFormItemProvider,
+} from '../../../interface';
+
+export class GctForm{{pascalCase}}Provider implements IFormItemProvider {
+  component = 'gct-form-{{kebabCase}}';
+
+  createController(form: IFormController, item: IFormItemBasic): IForm{{pascalCase}}Controller {
+    return useFormItemController(() => new Form{{pascalCase}}Controller(form, item));
+  }
+}

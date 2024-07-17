@@ -1,0 +1,13 @@
+import { App } from 'vue';
+import { GctForm{{pascalCase}}Provider } from './gct-form-{{kebabCase}}.provider';
+import { GctForm{{pascalCase}} } from './gct-form-{{kebabCase}}';
+
+export default {
+  install(app: App) {
+    // 安装表单项适配器
+    gct.register.formItem.register('{{kebabCase}}', () => new GctForm{{pascalCase}}Provider());
+
+    // 表单{{chineseText}}组件
+    app.component(GctForm{{pascalCase}}.name, GctForm{{pascalCase}});
+  },
+};

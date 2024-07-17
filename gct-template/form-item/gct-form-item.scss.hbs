@@ -1,0 +1,15 @@
+$gct-form-{{kebabCase}}: (
+  width: auto,
+  height: auto,
+);
+
+@include b(form-{{kebabCase}}) {
+  @include set-component-css-var('form-{{kebabCase}}', $gct-form-{{kebabCase}});
+
+  width: getCssVar(form-{{kebabCase}}, width);
+  height: getCssVar(form-{{kebabCase}}, height);
+
+  @include when(hidden) {
+    display: none;
+  }
+}

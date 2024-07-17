@@ -1,0 +1,27 @@
+import { IForm{{pascalCase}} } from '../../form';
+import { IForm{{pascalCase}}State } from '../../state';
+import { IFormItemBasicController } from '../form-item-basic/form-item-basic.controller';
+
+/**
+ * 表单{{chineseText}}
+ * @author lingxiaoming
+ * @date 2024-07-14 01:53:49
+ * @export
+ * @interface IForm{{pascalCase}}Controller
+ * @extends {IFormItemBasicController<M, S>}
+ * @template M
+ * @template S
+ */
+export interface IForm{{pascalCase}}Controller<
+  M extends IForm{{pascalCase}} = IForm{{pascalCase}},
+  S extends IForm{{pascalCase}}State = IForm{{pascalCase}}State,
+> extends IFormItemBasicController<M, S> {
+  /**
+   * {{chineseText}}类型
+   *
+   * @author lingxiaoming
+   * @date 2024-07-14 01:56:56
+   * @type {'{{kebabCase}}'}
+   */
+  type: '{{kebabCase}}';
+}
