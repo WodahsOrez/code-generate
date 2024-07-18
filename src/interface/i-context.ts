@@ -15,7 +15,7 @@ export interface IContext{
   /**
    * TWO_WORDS
    */
-  pascalSnakeCase:string
+  constantCase:string
   /**
    * 中文名称
    */

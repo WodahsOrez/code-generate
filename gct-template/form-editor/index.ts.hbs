@@ -1,0 +1,10 @@
+import { widthEditorInstall } from '@gct/runtime';
+import { DesignEditorType } from '../../constant';
+import { {{pascalCase}} } from './{{kebabCase}}';
+import { {{pascalCase}}Provider } from './{{kebabCase}}.provider';
+
+export default widthEditorInstall(
+  DesignEditorType.{{constantCase}},
+  () => new {{pascalCase}}Provider(),
+  {{pascalCase}},
+);

@@ -1,0 +1,46 @@
+import { defineComponent, PropType } from 'vue';
+import { {{pascalCase}}Controller } from './{{kebabCase}}.controller';
+import { useNamespace, useGctFormValue, IFormItem } from '@gct/runtime';
+import { I{{pascalCase}} } from '../../interface';
+import './{{kebabCase}}.scss';
+
+/**
+ * {{chineseText}}编辑器
+ */
+export const {{pascalCase}} = defineComponent({
+  name: '{{pascalCase}}',
+  props: {
+    itemModel: {
+      type: Object as PropType<IFormItem>,
+      required: true,
+    },
+    model: {
+      type: Object as PropType<I{{pascalCase}}>,
+      required: true,
+    },
+    value: {
+      type: String,
+    },
+  },
+  emits: ['update:value'],
+  setup(props) {
+    const ns = useNamespace('{{kebabCase}}');
+
+    const c = new {{pascalCase}}Controller(props.model);
+
+    const val = useGctFormValue();
+
+    return { ns, c, val };
+  },
+  render() {
+    return (
+      <a-input
+        v-model:checked={this.val}
+        {...(this.model.props || {})}
+        class={[this.ns.b(), this.ns.is('readonly', this.model.readonly)]}
+      />
+    );
+  },
+});
+
+export default {{pascalCase}};
